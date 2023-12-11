@@ -66,7 +66,7 @@ const HomePage = () => {
         <nav>
           <ul>
             <li><Link to='/HomePage'>Home </Link></li>
-            <li>About</li>
+           
             <li><Link to='/Profile'> Profile </Link></li>
           </ul>
           {userData && (

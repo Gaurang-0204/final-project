@@ -4,12 +4,15 @@ import { collection, getDocs } from 'firebase/firestore'
 import { Link } from 'react-router-dom';
 import '../Login.css';
 import Popup from '../Popup/Popup'; 
+import {  storage } from '../../config/firebase';
+import { ref, getDownloadURL } from 'firebase/storage';
 
 
 const Club = () => {
   const [clublist, setClubList] = useState([]);
   const [clubid, setclubid]=useState("");
   const clubCollectionRef = collection(db, 'club');
+  
   
     const getClubList = async () => {
       let filteredData = []; // Declare filteredData with the appropriate scope
@@ -28,20 +31,26 @@ const Club = () => {
 
     getClubList();
   }, []);
+
+ 
   return (
 
    
     <div className='clubfirst'>
+      <p className='c'>
        <Popup/>
+       </p>
       {clublist.map((club) => (
-        <div>
-          <div className=''> 
+        <div id='formList' className='item'>
+          <div id='list'> 
+          <div className='direction'>
           <Link to={`/Showclub/${club.id}`}> 
                 <h2 onClick={()=> setclubid(club.id)}>{club.name}</h2>
                 </Link>
                 <small>{club.description}</small>
                 
                 <span class ="left-container-arrow"></span>
+                </div>
             </div>
          
         </div>
