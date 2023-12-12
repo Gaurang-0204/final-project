@@ -3,6 +3,7 @@ import { getDoc, doc } from 'firebase/firestore';
 import { db,storage } from '../config/firebase';
 import { useState,useEffect } from 'react';
 import { ref, getDownloadURL } from 'firebase/storage';
+import "./profile.css"
 
 const Profile = () => {
   const userId = localStorage.getItem("userId");

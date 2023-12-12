@@ -110,7 +110,7 @@ const Showclub = () => {
 
         <div className='club-data'>
           <p>Name: {clubData.name}</p>
-          <p>Admin:{clubData.admin}</p>
+          
           </div>
         </div>
         

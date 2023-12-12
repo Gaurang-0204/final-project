@@ -14,6 +14,7 @@ import Profile from './components/Profile';
 import Events from './components/Events/Events'
 import Showevents from './components/Events/Showevents';
 import Createevents from './components/Events/Createevents';
+import Chatbot from './components/chatbot/Chatbot';
 
 
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
@@ -56,6 +57,7 @@ const [loading,setLoading]=useState(false);
         <Route path='/Events' element={<Events/>}/>
         <Route path='/Showevents/:eventid' element={<Showevents/>}/>
         <Route path='/createevents' element={<Createevents/>}/>
+        <Route path='/chatbot' element={<Chatbot/>}/>
         
       </Routes>  
       
