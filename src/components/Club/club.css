@@ -1,0 +1,104 @@
+
+
+.clubfirst{
+    
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-top: 50px; */
+}
+
+.item{
+    padding: 20px;
+    width: 350px;
+    height: 300px;
+    margin: 20px;
+    background-color: white;
+}
+
+h2{
+    color: black;
+    margin-bottom: 10px;
+}
+
+small{
+    color: rgb(62, 62, 62);
+}
+
+.card-slider {
+    display: flex;
+    overflow: hidden;
+  }
+  
+
+  
+  .prev-btn,
+  .next-btn {
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin: 0 10px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    /* Add styles for the Create New Club button */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    background: black;
+    transition: .3s;
+  }
+  
+.btn-primary{
+    margin-top: 30px;
+    background: black;
+    transition: .3s;
+}
+
+.btn-primary:hover{
+    background: rgb(23, 23, 23);
+}
+
+.head-sc{
+    margin-top: 30px;
+}
+
+.clubshow-cont{
+    max-width: 1200px;
+    margin: 60px;
+}
+
+.club-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.club-img{
+    float: 1;
+}
+
+.club-data{
+    
+}
+
+.club-desc{
+    margin: 50px;
+}
+
+.decs{
+    text-align: start;
+}

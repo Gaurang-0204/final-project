@@ -177,16 +177,16 @@ button{
 	transition: transform 0.5s;
 }
 .card1{
-	background-image: url();
+	background-image: url('../../public/club.jpg');
 }
 .card2{
-	background-image: url();
+	background-image: url('../../public/event.jpg');
 }
 .card3{
-	background-image: url();
+	background-image: url('../../public/moodle.jpg');
 }
 .card4{
-	background-image: url();
+	background-image: url('../../public/collpoll.jpg');
 }
 .card:hover{
 	transform: translateY(-10px);
@@ -609,6 +609,10 @@ input[type=number], input[type=string] {
 	height: 100vh;
 	background-color: #000;
 }
+/*-------------experiment---------------*/
+.logo{
+  
+}
 
 /* ---------------------club page -------------------------------*/
 .c{
@@ -618,8 +622,9 @@ input[type=number], input[type=string] {
 }
 .clubfirst{
 	width:100%;
-	padding: 30px;
-	
+	padding: 0px;
+	height: 100vh;
+
 	
 	
 }
