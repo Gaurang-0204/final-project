@@ -102,3 +102,14 @@ small{
 .decs{
     text-align: start;
 }
+
+.explore-btn{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dypiu-logo{
+    width: 120px;
+    height: 100px;
+    margin-bottom: 15px;
+}

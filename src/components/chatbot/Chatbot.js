@@ -1,17 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { auth } from '../config/firebase';
-import { signOut } from 'firebase/auth';
-import { getDoc, doc } from 'firebase/firestore';
-import { db, storage } from '../config/firebase';
-import { ref, getDownloadURL } from 'firebase/storage';
-import Imagerobo from "./images/robot.png"
-import image from "./images/robot.png";
-import "../components/chatbot/chatbot.css"
-import "../components/Club/club.css"
+import image from "../images/robot.png";
+import { useState, useRef } from "react";
+import "./chatbot.css"
 
-const HomePage = () => {
-
+function Chatbot() {
   const humanMessage = useRef();
   const botmessage = useRef();
   const input = useRef();
@@ -176,26 +167,26 @@ const HomePage = () => {
     }
 
     let owner = [
-      "Who is your the owner|who is the owner|Who is the owner of this bot|who is the owner of this bot|Who made you|who made you|Who is your maker|Who made you|who is your maker|who is your owner|Who is your owner",
+      "Who is the owner|who is the owner|Who is the owner of this bot|who is the owner of this bot|Who made you|who made you|Who is your maker|Who made you|who is your maker|who is your owner|Who is your owner",
     ];
     let words9 = new RegExp(owner);
     if (words9.test(document.querySelector("#input").value)) {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
-        getBotMessage.innerText = "My owner is Abdul R N";
+        getBotMessage.innerText = "The owner of this bot is Treasure";
         inputRef.value = ""; // clear the input
       }, 2000);
     }
 
     let owner2 = [
-      "Who's Abdul R N|who's Abdul R N|Who is Abdul R N|who is Abdul R N",
+      "Who's Treasure|who's Treasure|Who is Treasure|who is Treasure",
     ];
     let words10 = new RegExp(owner2);
     if (words10.test(document.querySelector("#input").value)) {
       getBotMessage.innerText = "Typing...";
       setTimeout(() => {
         getBotMessage.innerText =
-          "Abdul R N is a programmer";
+          "Treasure is a programmer based on ReactJS and NodeJS he is the owner of a youtube channel called Creative Tutorials";
         inputRef.value = ""; // clear the input
       }, 2000);
     }
@@ -212,168 +203,10 @@ const HomePage = () => {
         inputRef.value = ""; // clear the input
       }, 2000);
     }
-
-    let liveQues = [
-      "Where do you live",
-    ]; //adding the age-question
-    let words12 = new RegExp(liveQues);
-    if (words12.test(document.querySelector("#input").value)) {
-      // if the input contains some question
-      getBotMessage.innerText = "Typing...";
-      setTimeout(() => {
-        getBotMessage.innerText = "I live in pune";
-        inputRef.value = ""; // clear the input
-      }, 2000);
-    }
-
-    let Q1 = [
-      "Where do you live",
-    ]; //adding the age-question
-    let words13 = new RegExp(Q1);
-    if (words13.test(document.querySelector("#input").value)) {
-      // if the input contains some question
-      getBotMessage.innerText = "Typing...";
-      setTimeout(() => {
-        getBotMessage.innerText = "I live in pune";
-        inputRef.value = ""; // clear the input
-      }, 2000);
-    }
     getHumanMessage.innerText = inputRef.value; // display the message
   };
-
-
-
-
-  const userId = localStorage.getItem('userId');
-  let navigate = useNavigate();
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-  const [userData, setUserData] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const docRef = doc(db, 'students', userId);
-        const club = await getDoc(docRef);
-        setUserData(club.data());
-      } catch (error) {
-        console.error('Error fetching club data:', error);
-      }
-    };
-
-    fetchUserData();
-  }, [userId]);
-
-  useEffect(() => {
-    if (userData && userData.image) {
-      const imageRef = ref(storage, userData.image);
-      getDownloadURL(imageRef)
-        .then((url) => {
-          setImageUrl(url);
-        })
-        .catch((error) => {
-          console.error('Error fetching image URL: ', error);
-        });
-    }
-  }, [userData]);
-
-  const clearUserIdInLocalStorage = () => {
-    localStorage.removeItem('userId');
-  };
-
-  const logout = async () => {
-    try {
-      await signOut(auth);
-      clearUserIdInLocalStorage();
-      navigate('/');
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const toggleMenu = () => {
-    setIsSubMenuOpen(!isSubMenuOpen);
-  };
-
-  const openPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const closePopup = () => {
-    setIsPopupOpen(false);
-  };
-
   return (
-    <div className="container">
-      <div className="navbar">
-
-        <nav>
-          <ul>
-            <li><Link to='/HomePage'>Home </Link></li>
-            <li><Link to='/Profile'> Profile </Link></li>
-          </ul>
-          {userData && (
-            <div>
-              {imageUrl && (
-                <img src={imageUrl} className="user-pic" onClick={toggleMenu} alt="User" />
-              )}
-              <div className={`sub-menu-wrap ${isSubMenuOpen ? 'open-menu' : ''}`} id="subMenu">
-                {/* ... existing submenu content ... */}
-              </div>
-            </div>
-          )}
-        </nav>
-      </div>
-
-      <div className="row">
-        <div className="col">
-          <h1 className="hp"><img src="./DYPlogo.png" alt="" className="dypiu-logo" />DYPIU</h1>
-          <p className="hpp">
-
-            D Y Patil International University, Akrudi, Pune is one of the finest private universities in India, which is providing the highly-skilled talent to the nation and overseas. The university has recently become operational as a state private university and offering the best quality higher education in the field of engineering, management, international business, graphic design, biotechnology, journalism, and mass communication.
-          </p>
-          <a type="button" className='explore-btn'><Link to='/map'>Maps &#10501;</Link></a>
-        </div>
-        <div className="col">
-        <div className="card card1">
-            <h5><Link to="/club">Clubs</Link></h5>
-            <p>
-              Welcome to different clubs of dypiu, click here for more info.
-            </p>
-          </div>
-          <div className="card card2">
-            <h5><Link to="/Events">Events</Link></h5>
-            <p>
-              Click here to know and join the upcoming events.
-            </p>
-          </div>
-          <div className="card card3">
-            <h5><a href="https://learning.dypiu.ac.in/">Moodle</a></h5>
-            <p>
-              Access your courses here.
-            </p>
-          </div>
-          <div className="card card4">
-            <h5><a href="https://dypiu.collpoll.com/home">Collpoll</a></h5>
-            <p>
-              Check and pay your dues here.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Popup Button */}
-      <div className="popup-button" onClick={openPopup}>
-        <img src={Imagerobo} alt="Popup Icon" />
-      </div>
-
-      {/* Popup */}
-      {isPopupOpen && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close-popup" onClick={closePopup}>&times;</span>
-            <div className="App" onLoad={checkStatus}>
+    <div className="App" onLoad={checkStatus}>
       <div className="wrapper">
         <div className="content">
           <div className="header">
@@ -421,11 +254,7 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-          </div>
-        </div>
-      )}
-    </div>
   );
 }
 
-export default HomePage;
+export default Chatbot;
