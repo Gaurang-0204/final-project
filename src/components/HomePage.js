@@ -124,7 +124,7 @@ const HomePage = () => {
           <p className="hpp">
           D Y Patil International University, Akrudi, Pune is one of the finest private universities in India, which is providing the highly-skilled talent to the nation and overseas. The university has recently become operational as a state private university and offering the best quality higher education in the field of engineering, management, international business, graphic design, biotechnology, journalism, and mass communication.
           </p>
-          <button type="button"><Link to='/map'>Explore</Link></button>
+          <button type="button" className='explore-btn'><Link to='/map'>Explore</Link></button>
         </div>
         <div className="col">
           <div className="card card1">

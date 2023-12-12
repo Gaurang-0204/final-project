@@ -79,14 +79,14 @@ const Showclub = () => {
 
   return (
     <div>
-      <h1>Club Data</h1>
+      <h1 className='head-sc'>Club Data</h1>
       {clubData ? (
-        <div>
-          <p>Name: {clubData.name}</p>
-          <p>Description: {clubData.description}</p>
+        <div className='clubshow-cont'>
+          <div className='club-container'>
+          
           {/* Display images here */}
           {imageUrls.length > 0 && (
-            <div>
+            <div className='club-img'>
               <h2>Images</h2>
               <div className="image-container">
                 {imageUrls.map((imageUrl, index) => (
@@ -107,6 +107,17 @@ const Showclub = () => {
               </ul>
             </div>
           )}
+
+        <div className='club-data'>
+          <p>Name: {clubData.name}</p>
+          
+          </div>
+        </div>
+        
+        <div className='club-desc'>
+        <h3>Club Description</h3>
+        <p className='decs'>Description: {clubData.description}</p>
+        </div>
         </div>
       ) : (
         <p>Loading...</p>

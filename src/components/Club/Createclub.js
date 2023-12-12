@@ -5,6 +5,7 @@ import { storage } from '../../config/firebase';
 import { addDoc, collection } from 'firebase/firestore';
 import { ref, uploadBytes } from 'firebase/storage';
 import { v4 } from 'uuid';
+import "./club.css";
 
 const Createclub = () => {
   const navigate = useNavigate();
