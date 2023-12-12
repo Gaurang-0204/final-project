@@ -14,7 +14,8 @@ import Profile from './components/Profile';
 import Events from './components/Events/Events'
 import Showevents from './components/Events/Showevents';
 import Createevents from './components/Events/Createevents';
-import Map from './components/Map/Map';
+
+
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 
@@ -55,7 +56,7 @@ const [loading,setLoading]=useState(false);
         <Route path='/Events' element={<Events/>}/>
         <Route path='/Showevents/:eventid' element={<Showevents/>}/>
         <Route path='/createevents' element={<Createevents/>}/>
-        <Route path='/map' element={<Map/>}/>
+        
       </Routes>  
       
     

@@ -78,19 +78,16 @@ const Showclub = () => {
   }, [clubData]);
 
   return (
-    <div className='fullpage'>
-       <h1>DY PATIL INTERNATIONAL UNIVERSITY</h1>
-      <h1>Club Data</h1>
+    <div>
+      <h1 className='head-sc'>Club Data</h1>
       {clubData ? (
-        <div className="details-club"> 
-          <div>
-          <p>Name: {clubData.name}</p>
-          <p>Description: {clubData.description}</p>
-          </div>
+        <div className='clubshow-cont'>
+          <div className='club-container'>
+          
           {/* Display images here */}
           {imageUrls.length > 0 && (
-            <div>
-              <h2></h2>
+            <div className='club-img'>
+              <h2>Images</h2>
               <div className="image-container">
                 {imageUrls.map((imageUrl, index) => (
                   <img key={index} src={imageUrl} className="clubimg" alt={`Image ${index + 1}`} />
@@ -110,6 +107,17 @@ const Showclub = () => {
               </ul>
             </div>
           )}
+
+        <div className='club-data'>
+          <p>Name: {clubData.name}</p>
+          <p>Admin:{clubData.admin}</p>
+          </div>
+        </div>
+        
+        <div className='club-desc'>
+        <h3>Club Description</h3>
+        <p className='decs'>Description: {clubData.description}</p>
+        </div>
         </div>
       ) : (
         <p>Loading...</p>

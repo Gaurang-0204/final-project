@@ -62,11 +62,11 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="navbar">
-        <img src=" ./DYPlogo.png" alt="" className="" />
+        <img src=" ./DYPlogo.png" alt="" className="logo" />
         <nav>
           <ul>
             <li><Link to='/HomePage'>Home </Link></li>
-            <li>About</li>
+           
             <li><Link to='/Profile'> Profile </Link></li>
           </ul>
           {userData && (
@@ -134,12 +134,14 @@ const HomePage = () => {
           <div className="card card2">
             <h5><Link to="/Events">Events</Link></h5>
 
+
           </div>
           <div className="card card3">
             <h5><a href="https://learning.dypiu.ac.in/">Moodle</a></h5>
           </div>
           <div className="card card4">
             <h5><a href="https://dypiu.collpoll.com/home">Collpoll</a></h5>
+
 
           </div>
         </div>

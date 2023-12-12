@@ -177,16 +177,16 @@ button{
 	transition: transform 0.5s;
 }
 .card1{
-	background-image: url(C:\Users\saket\Desktop\final-project\public\Team.png);
+	background-image: url('../../public/club.jpg');
 }
 .card2{
-	background-image: url(C:\Users\saket\Desktop\final-project\public\Event.png);
+	background-image: url('../../public/event.jpg');
 }
 .card3{
-	background-image: url(C:\Users\saket\Desktop\final-project\public\Moodel.png);
+	background-image: url('../../public/moodle.jpg');
 }
 .card4{
-	background-image: url(C:\Users\saket\Desktop\final-project\public\collpoll.png);
+	background-image: url('../../public/collpoll.jpg');
 }
 .card:hover{
 	transform: translateY(-10px);
@@ -532,31 +532,13 @@ footer {
 
 
 /*----------- showclub page -------*/
-.fullpage{
-	margin-right: 2px;
-	margin-top: 4px;
-}
-.details-club {
-	display: flex;
-	align-items: center;
-	text-align: left;
-  }
-  
-  .details-club > div {
-	flex: 1;
-	padding: 20px;
-  }
-  
 
-  
-  .clubimg {
-	max-width: 100%;
-	height: 80vh;
-	width: 120vh;
-	margin-right: 5px;
-  }
-  
-  /* Add additional styling as needed */
+
+.image-container{
+	width: 300px;
+	
+}
+/* Additional media queries for other screen sizes if needed */
 
 /* ------create club -
 
@@ -627,5 +609,27 @@ input[type=number], input[type=string] {
 	height: 100vh;
 	background-color: #000;
 }
+/*-------------experiment---------------*/
+.logo{
+  
+}
 
-/* Your existing CSS code */
+/* ---------------------club page -------------------------------*/
+.c{
+	height: 350px;
+	
+    
+}
+.clubfirst{
+	width:100%;
+	padding: 0px;
+	height: 100vh;
+
+	
+	
+}
+.clubimg{
+	width: 100%;
+	height: 150px;
+
+}
