@@ -65,9 +65,11 @@ const HomePage = () => {
         <img src=" ./DYPlogo.png" alt="" className="logo" />
         <nav>
           <ul>
-            <li><Link to='/HomePage'>Home </Link></li>
-           
-            <li><Link to='/Profile'> Profile </Link></li>
+            <li><Link to='/HomePage'>Home</Link></li>
+            <li><Link to=''>About us</Link></li>
+            <li><Link to=''>Gallery</Link></li>
+            <li><Link to=''>Contact us</Link></li>
+            <li><Link to='/Profile'>Profile</Link></li>
           </ul>
           {userData && (
             <div>
@@ -141,8 +143,12 @@ const HomePage = () => {
           </div>
           <div className="card card4">
             <h5><a href="https://dypiu.collpoll.com/home">Collpoll</a></h5>
-
-
+          </div>
+          <div className="card card5">
+            <h5><a href="">Lost and Found</a></h5>
+          </div>
+          <div className="card card6">
+            <h5><a href="">Sports</a></h5>
           </div>
         </div>
       </div>

@@ -163,8 +163,8 @@ button{
 	margin-top: 30;
 }
 .card{
-	width: 200px;
-	height: 230px;
+	width: 180px;
+	height: 200px;
 	color: #ffffff;
 	display: inline-block;
 	border-radius: 10px;
@@ -177,16 +177,22 @@ button{
 	transition: transform 0.5s;
 }
 .card1{
-	background-image: url('../../public/club.jpg');
+	background-image: url('../../public/Club1.png');
 }
 .card2{
-	background-image: url('../../public/event.jpg');
+	background-image: url('../../public/Event.png');
 }
 .card3{
-	background-image: url('../../public/moodle.jpg');
+	background-image: url('../../public/moodle1.png');
 }
 .card4{
-	background-image: url('../../public/collpoll.jpg');
+	background-image: url('../../public/collpoll.png');
+}
+.card5{
+	background-image: url('../../public/Lostandfound.png');
+}
+.card6{
+	background-image: url('../../public/Sport1.png');
 }
 .card:hover{
 	transform: translateY(-10px);
@@ -532,13 +538,31 @@ footer {
 
 
 /*----------- showclub page -------*/
-
-
-.image-container{
-	width: 300px;
-	
+.fullpage{
+	margin-right: 2px;
+	margin-top: 4px;
 }
-/* Additional media queries for other screen sizes if needed */
+.details-club {
+	display: flex;
+	align-items: center;
+	text-align: left;
+  }
+  
+  .details-club > div {
+	flex: 1;
+	padding: 20px;
+  }
+  
+
+  
+  .clubimg {
+	max-width: 100%;
+	height: 80vh;
+	width: 120vh;
+	margin-right: 5px;
+  }
+  
+  /* Add additional styling as needed */
 
 /* ------create club -
 
@@ -609,27 +633,5 @@ input[type=number], input[type=string] {
 	height: 100vh;
 	background-color: #000;
 }
-/*-------------experiment---------------*/
-.logo{
-  
-}
 
-/* ---------------------club page -------------------------------*/
-.c{
-	height: 350px;
-	
-    
-}
-.clubfirst{
-	width:100%;
-	padding: 0px;
-	height: 100vh;
-
-	
-	
-}
-.clubimg{
-	width: 100%;
-	height: 150px;
-
-}
+/* Your existing CSS code */
