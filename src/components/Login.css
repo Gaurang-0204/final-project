@@ -177,16 +177,16 @@ button{
 	transition: transform 0.5s;
 }
 .card1{
-	background-image: url();
+	background-image: url(C:\Users\saket\Desktop\final-project\public\Team.png);
 }
 .card2{
-	background-image: url();
+	background-image: url(C:\Users\saket\Desktop\final-project\public\Event.png);
 }
 .card3{
-	background-image: url();
+	background-image: url(C:\Users\saket\Desktop\final-project\public\Moodel.png);
 }
 .card4{
-	background-image: url();
+	background-image: url(C:\Users\saket\Desktop\final-project\public\collpoll.png);
 }
 .card:hover{
 	transform: translateY(-10px);
@@ -208,7 +208,7 @@ h5{
 body {
 	font-family: 'Arial', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('');
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('C:\Users\saket\Desktop\final-project\public\homepage_background.PNG');
 	background-position: center;
 	background-size: cover;
 }
@@ -532,14 +532,31 @@ footer {
 
 
 /*----------- showclub page -------*/
-.clubimg {
-	border-radius: 8px;
-  }
-.image-container{
-	width: 300px;
-	
+.fullpage{
+	margin-right: 2px;
+	margin-top: 4px;
 }
-/* Additional media queries for other screen sizes if needed */
+.details-club {
+	display: flex;
+	align-items: center;
+	text-align: left;
+  }
+  
+  .details-club > div {
+	flex: 1;
+	padding: 20px;
+  }
+  
+
+  
+  .clubimg {
+	max-width: 100%;
+	height: 80vh;
+	width: 120vh;
+	margin-right: 5px;
+  }
+  
+  /* Add additional styling as needed */
 
 /* ------create club -
 

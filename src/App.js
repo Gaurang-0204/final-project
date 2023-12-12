@@ -15,8 +15,8 @@ import Events from './components/Events/Events'
 import Showevents from './components/Events/Showevents';
 import Createevents from './components/Events/Createevents';
 import Map from './components/Map/Map';
-
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 
 
 
@@ -30,8 +30,8 @@ const [loading,setLoading]=useState(false);
     },2000)
   },[])
   return (
+
     <div className="App">
-      
     {
       loading ?
       <ClimbingBoxLoader
@@ -61,7 +61,9 @@ const [loading,setLoading]=useState(false);
     
     </Router>
     }
-    </div>
+
+
+</div>
   );
 }
 

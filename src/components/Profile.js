@@ -37,14 +37,18 @@ const Profile = () => {
   }, [userData]);
 
   return (
-    <div>
+    <div className="profile-container">
       <h1>Profile</h1>
       {userData ? (
-        <div>
+       <div className="profile-details">
+         <div className="image-container">
+         {imageUrl && <img src={imageUrl} className='clubimg'/>}
+         </div>
+         <div className="text-container">
           <p>Name: {userData.name}</p>
           <p>Description: {userData.description}</p>
-          {imageUrl && <img src={imageUrl} className='clubimg'/>}
           {/* Add more properties as needed */}
+        </div>
         </div>
       ) : (
         <p>Loading...</p>

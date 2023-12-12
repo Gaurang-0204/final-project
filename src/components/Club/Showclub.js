@@ -78,16 +78,19 @@ const Showclub = () => {
   }, [clubData]);
 
   return (
-    <div>
+    <div className='fullpage'>
+       <h1>DY PATIL INTERNATIONAL UNIVERSITY</h1>
       <h1>Club Data</h1>
       {clubData ? (
-        <div>
+        <div className="details-club"> 
+          <div>
           <p>Name: {clubData.name}</p>
           <p>Description: {clubData.description}</p>
+          </div>
           {/* Display images here */}
           {imageUrls.length > 0 && (
             <div>
-              <h2>Images</h2>
+              <h2></h2>
               <div className="image-container">
                 {imageUrls.map((imageUrl, index) => (
                   <img key={index} src={imageUrl} className="clubimg" alt={`Image ${index + 1}`} />
