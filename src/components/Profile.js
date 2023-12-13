@@ -39,17 +39,26 @@ const Profile = () => {
 
   return (
     <div>
+      <h1 className="hp"><img src="./DYPlogo.png" alt="" className="dypiu-logo" />DYPIU</h1>
       <h1>Profile</h1>
+      <div className='prow'>
+      
       {userData ? (
-        <div>
-          <p>Name: {userData.name}</p>
-          <p>Description: {userData.description}</p>
-          {imageUrl && <img src={imageUrl} className='clubimg'/>}
+        <div className='pro-cont'>
+          <div>
+          
+          <div>{imageUrl && <img src={imageUrl} className='clubimg'/>}</div>
           {/* Add more properties as needed */}
+        </div>
+        <div>
+          <p className='pro-head'>Name: {userData.name}</p>
+          <p className='pro-desc'>Description: {userData.description}</p>
+          </div>
         </div>
       ) : (
         <p>Loading...</p>
       )}
+    </div>
     </div>
   );
 };
